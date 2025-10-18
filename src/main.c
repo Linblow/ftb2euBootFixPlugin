@@ -32,7 +32,7 @@ static const char g_appName[] = APP_NAME;
 static volatile State g_state = STATE_INIT;
 
 /* Loading this in the user RAM may "shift" the game's module load address.
-   To avoid this, we run this is kernel mode to load it in kernel memory. */
+   To avoid this, we run this in kernel mode to load it in kernel memory. */
 PSP_MODULE_INFO(APP_NAME, PSP_MODULE_KERNEL, APP_VER_MAJOR, APP_VER_MINOR);
 
 static inline State setState(State st)
