@@ -1,0 +1,5 @@
+.vscode/settings.json
+/*.elf
+/*.prx
+src/exports.c
+*.o

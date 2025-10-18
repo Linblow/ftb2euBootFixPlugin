@@ -1,0 +1,70 @@
+{
+    "env": {
+        "commonIncludePath": [
+            "${default}", 
+            "printf/src",
+            "src"
+        ],
+        "commonIncludePath_pspsdk": [
+            "${PSPDEV}/include",
+            "${PSPDEV}/psp/sdk/include",
+            "${PSPDEV}/psp/include",
+            "${PSPDEV}/psp/include/c++/*/",
+            "${PSPDEV}/lib/gcc/psp/*/include"
+        ],
+        "commonDefines": [
+            "__psp__=1",
+            "_PSP=1",
+            "_R3000=1",
+            "__R3000=1",
+            "__R3000__=1",
+            "_MIPS_TUNE=allegrex",
+            "_MIPS_TUNE_ALLEGREX=1",
+            "mips=1",
+            "_mips=1",
+            "__mips=2",
+            "__mips__=1",
+            "_PSP_FW_VERSION=660"
+            // "_DEBUG",
+            // "DEBUG",
+            // "KERNEL_MODULE=1"
+        ],
+        "commonDefines_Win32": [
+        ],
+        "commonDefines_Linux": [
+        ]
+    },
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${commonIncludePath}",
+                "${commonIncludePath_pspsdk}"
+            ],
+            "defines": [
+                "${commonDefines}",
+                "${commonDefines_Win32}"
+            ],
+            "compilerPath": "",
+            "cStandard": "c99",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "gcc-x86"
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "${commonIncludePath}",
+                "${commonIncludePath_pspsdk}"
+            ],
+            "defines": [
+                "${commonDefines}",
+                "${commonDefines_Linux}"
+            ],
+            "compilerPath": "${PSPDEV}/bin/psp-gcc",
+            "cStandard": "c99",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "gcc-x86"
+        }
+    ],
+    "version": 4
+}
